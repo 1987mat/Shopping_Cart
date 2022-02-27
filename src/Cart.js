@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './App.css';
 
-const App = () => {
+const Cart = () => {
   return (
     <div>
       <header>
@@ -31,12 +30,8 @@ const App = () => {
         </nav>
       </header>
       <main>
-        <div className="home">
-          <h2>
-            <Link className="visit-link" to="/shop">
-              <button>Visit the shop!</button>
-            </Link>
-          </h2>
+        <div className="cart">
+          <h1>Hello from cart</h1>
         </div>
       </main>
       <footer className="footer">
@@ -49,4 +44,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Cart;
