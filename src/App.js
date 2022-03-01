@@ -1,50 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './App.css';
+import Header from './Header';
 
 const App = () => {
   return (
     <div>
-      <header>
-        <Link className="home-link" to="/">
-          <h1>Mat's Shop</h1>
-        </Link>
-        <nav>
-          <ul className="nav-list">
-            <li>
-              <Link className="link" to="/">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link className="link" to="/shop">
-                Shop
-              </Link>
-            </li>
-            <li>
-              <Link className="link" to="/cart">
-                <i class="fa fa-shopping-cart"></i>
-                <span>(0)</span>
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
+      <Header />
       <main>
-        <div className="home">
+        <div className="home text-center">
           <h2>
             <Link className="visit-link" to="/shop">
-              <button>Visit the shop!</button>
+              <button className="btn btn-primary btn-light btn-lg p-2">
+                Visit the shop!
+              </button>
             </Link>
           </h2>
         </div>
       </main>
-      <footer className="footer">
-        Developed by Mat
-        <a href="https://github.com/1987mat" target="_blank" rel="noreferrer">
-          <ion-icon name="logo-github"></ion-icon>
-        </a>
-      </footer>
     </div>
   );
 };
