@@ -11,8 +11,8 @@ const App = () => {
         <div className="home text-center">
           <h2>
             <Link className="visit-link" to="/shop">
-              <button className="btn btn-primary btn-light btn-lg p-2">
-                Visit the shop!
+              <button className=" visit-link btn btn-primary btn-light btn-lg p-2">
+                <span className="home-text">SHOP NOW!</span>
               </button>
             </Link>
           </h2>

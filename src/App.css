@@ -17,10 +17,42 @@ body {
   text-align: center;
 }
 
-.link {
-  color: whitesmoke;
+.home-text {
+  font-size: 3rem;
+  font-weight: 500;
+  padding: 1.5em;
 }
 
-.link:hover {
+.nav-link {
   text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+}
+
+.title-link {
+  text-decoration: none;
+  color: white;
+}
+
+.title-link:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-link:hover {
+  text-decoration: none;
+  color: white;
+  transform: scale(1.1);
+}
+
+.visit-link {
+  transition: all linear 0.5s;
+}
+
+.visit-link:hover {
+  cursor: pointer;
+}
+
+.active {
+  font-weight: bolder;
 }

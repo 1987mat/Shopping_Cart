@@ -1,32 +1,32 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <nav className="navbar" style={{ backgroundColor: '#484848' }}>
-      <Link className="home-link link" to="/">
-        <h1 className="display-5 font-weight-bold">Mat's Shop</h1>
-      </Link>
-
-      <ul className="d-flex list-unstyled">
-        <li className="m-3">
-          <Link className="link" to="/">
-            Home
-          </Link>
-        </li>
-        <li className="m-3">
-          <Link className="link" to="/shop">
-            Shop
-          </Link>
-        </li>
-        <li className="m-3">
-          <Link to="/cart">
-            <i className="link fa fa-shopping-cart"></i>
-            <span className="link">(0)</span>
-          </Link>
-        </li>
-      </ul>
-    </nav>
+    <header>
+      <nav className="navbar" style={{ backgroundColor: '#202020' }}>
+        <Link to="/" className="title-link">
+          <h1 className="display-5 font-weight-bold">Mat's Shop</h1>
+        </Link>
+        <ul className="d-flex list-unstyled">
+          <li className="m-1">
+            <NavLink activeClassName="active" className="nav-link" to="/">
+              Home
+            </NavLink>
+          </li>
+          <li className="m-1">
+            <NavLink activeClassName="active" className="nav-link" to="/shop">
+              Shop
+            </NavLink>
+          </li>
+          <li className="m-1">
+            <NavLink className="nav-link" to="/cart">
+              <i className="nav-link fa fa-shopping-cart"></i>
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 };
 
