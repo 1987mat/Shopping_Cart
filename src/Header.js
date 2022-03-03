@@ -4,19 +4,28 @@ import { Link, NavLink } from 'react-router-dom';
 const Header = () => {
   return (
     <header>
-      <nav className="navbar" style={{ backgroundColor: '#202020' }}>
+      <nav className="navbar">
         <Link to="/" className="title-link">
-          <h1 className="display-5 font-weight-bold">Mat's Shop</h1>
+          <h1 className="display-5 font-weight-bold">Ranee's Shop</h1>
         </Link>
         <ul className="d-flex list-unstyled">
           <li className="m-1">
-            <NavLink activeClassName="active" className="nav-link" to="/">
+            <NavLink activeclassname="active" className="nav-link" to="/">
               Home
             </NavLink>
           </li>
           <li className="m-1">
-            <NavLink activeClassName="active" className="nav-link" to="/shop">
+            <NavLink activeclassname="active" className="nav-link" to="/shop">
               Shop
+            </NavLink>
+          </li>
+          <li className="m-1">
+            <NavLink
+              activeclassname="active"
+              className="nav-link"
+              to="/contact"
+            >
+              Contact
             </NavLink>
           </li>
           <li className="m-1">
