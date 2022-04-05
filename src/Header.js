@@ -6,7 +6,7 @@ const Header = () => {
     <header>
       <nav className="navbar">
         <Link to="/" className="title-link">
-          <h1 className="display-5 font-weight-bold">Ranee's Shop</h1>
+          <h1 className="display-5 font-weight-bold">TrueStyle</h1>
         </Link>
         <ul className="d-flex list-unstyled">
           <li className="m-1">

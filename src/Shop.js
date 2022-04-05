@@ -2,16 +2,23 @@ import React, { useState } from 'react';
 import Header from './Header';
 import imagesArr from './Images';
 import Modal from './Modal';
+import Cart from './Cart';
+import Footer from './Footer';
 
 const Shop = () => {
   const [modalStatus, setModalStatus] = useState(false);
+  const [itemID, setItemID] = useState(null);
   const [itemImage, setItemImage] = useState(null);
   const [item, setItem] = useState(null);
   const [itemPrice, setItemPrice] = useState(null);
   const [itemDescription, setItemDescription] = useState(null);
+  const [addedItem, setAddedItem] = useState(false);
+  const [count, setCount] = useState(0);
+  const [cartArr, setCartArr] = useState([]);
 
   const openModal = (item) => {
     setModalStatus(!modalStatus);
+    setItemID(item.id);
     setItemImage(item.src);
     setItem(item.title);
     setItemPrice(item.price);
@@ -20,6 +27,15 @@ const Shop = () => {
 
   const closeModal = () => {
     setModalStatus(!modalStatus);
+    setAddedItem(false);
+  };
+
+  const addToCart = (image, title, price) => {
+    console.log(item);
+    const obj = { image, title, price };
+    setAddedItem(true);
+    setCount(count + 1);
+    setCartArr(cartArr.concat(obj));
   };
 
   return (
@@ -41,7 +57,7 @@ const Shop = () => {
                 ></img>
                 <div
                   className="p-2 text-center"
-                  style={{ backgroundColor: '#fffff0' }}
+                  style={{ backgroundColor: 'white' }}
                 >
                   <h4 className="item-title">{item.title}</h4>
                   <p className="item-price">
@@ -58,9 +74,13 @@ const Shop = () => {
           itemName={item}
           itemPrice={itemPrice}
           itemDescription={itemDescription}
+          itemID={itemID}
           closeModal={closeModal}
+          addToCart={addToCart}
+          addedItem={addedItem}
         />
       </main>
+      <Footer />
     </div>
   );
 };
