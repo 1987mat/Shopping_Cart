@@ -12,9 +12,13 @@ const Modal = (props) => {
         style={{ height: '22em', width: '17em', margin: '2em' }}
       />
       <div>
-        <h3>{props.itemName}</h3>
-        <p>{props.itemDescription}</p>
-        <p>$ {props.itemPrice}</p>
+        <h3 style={{ color: '#282828' }}>
+          <b>{props.itemName}</b>
+        </h3>
+        <p style={{ color: '#282828' }}>{props.itemDescription}</p>
+        <p style={{ color: '#282828' }}>
+          <b>$ {props.itemPrice}</b>
+        </p>
         <div className="d-flex flex-row">
           <button
             onClick={() =>

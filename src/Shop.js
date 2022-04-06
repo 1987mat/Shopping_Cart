@@ -57,10 +57,12 @@ const Shop = () => {
                 ></img>
                 <div
                   className="p-2 text-center"
-                  style={{ backgroundColor: 'white' }}
+                  style={{ backgroundColor: '#DCDCDC' }}
                 >
-                  <h4 className="item-title">{item.title}</h4>
-                  <p className="item-price">
+                  <h4 className="item-title" style={{ color: '#282828' }}>
+                    <b>{item.title}</b>
+                  </h4>
+                  <p className="item-price" style={{ color: '#282828' }}>
                     <b>$ {item.price}</b>
                   </p>
                 </div>
