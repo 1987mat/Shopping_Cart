@@ -11,19 +11,37 @@ import photo9 from './assets/images/9.jpg';
 const imagesArr = [
   {
     src: photo1,
-    title: 'title',
+    title: 'Jacket',
     description: 'this is description',
     price: '49.99',
     id: 0,
   },
-  { src: photo2, title: 'title', description: '', price: '89.99', id: 1 },
-  { src: photo3, title: 'title', description: '', price: '109.99', id: 2 },
-  { src: photo4, title: 'title', description: '', price: '99.99', id: 3 },
-  { src: photo5, title: 'title', description: '', price: '149.99', id: 4 },
-  { src: photo6, title: 'title', description: '', price: '129.99', id: 5 },
-  { src: photo7, title: 'title', description: '', price: '129.99', id: 6 },
-  { src: photo8, title: 'title', description: '', price: '79.99', id: 7 },
-  { src: photo9, title: 'title', description: '', price: '149.99', id: 8 },
+  {
+    src: photo2,
+    title: 'Jeans Jacket',
+    description: '',
+    price: '89.99',
+    id: 1,
+  },
+  {
+    src: photo3,
+    title: 'Jeans Skirt',
+    description: '',
+    price: '109.99',
+    id: 2,
+  },
+  { src: photo4, title: 'Hoodie', description: '', price: '99.99', id: 3 },
+  { src: photo5, title: 'Jacket', description: '', price: '149.99', id: 4 },
+  {
+    src: photo6,
+    title: 'Jeans Jacket',
+    description: '',
+    price: '129.99',
+    id: 5,
+  },
+  { src: photo7, title: 'Top', description: '', price: '129.99', id: 6 },
+  { src: photo8, title: 'T-Shirt', description: '', price: '79.99', id: 7 },
+  { src: photo9, title: 'Polo Shirt', description: '', price: '149.99', id: 8 },
 ];
 
 export default imagesArr;

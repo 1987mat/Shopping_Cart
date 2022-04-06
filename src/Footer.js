@@ -3,9 +3,18 @@ import React from 'react';
 const Footer = () => {
   return (
     <div className="footer">
-      <ion-icon name="logo-facebook"></ion-icon>
-      <ion-icon name="logo-instagram"></ion-icon>
-      <ion-icon name="logo-pinterest"></ion-icon>
+      <div className="sm-icons">
+        <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
+          <i className="fa fa-facebook-official"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
+          <i className="fa fa-instagram"></i>
+        </a>
+        <a href="https://www.pinterest.com" target="_blank" rel="noreferrer">
+          <i className="fa fa-pinterest"></i>
+        </a>
+      </div>
+      <p>Copyright &copy; 2022. All right reserved.</p>
     </div>
   );
 };

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Modal = (props) => {
   return (
     <div
-      className={props.showModal ? 'd-flex flex-row  popup card p-3' : 'd-none'}
+      className={props.showModal ? 'd-flex flex-row popup card p-3' : 'd-none'}
     >
       <img
         src={props.itemImage}
@@ -24,7 +24,7 @@ const Modal = (props) => {
           >
             Add To Cart
           </button>
-          <button onClick={props.closeModal} className="btn btn-md">
+          <button onClick={props.closeModal} className="btn btn-md ml-2">
             Go Back
           </button>
         </div>

@@ -118,7 +118,7 @@ body {
   transform: scale(1.1);
 }
 
-.visit-link {
+.visit-link button {
   border: none;
   transition: all linear 0.2s;
   background-image: linear-gradient(
@@ -176,10 +176,39 @@ body {
   box-shadow: none !important;
 }
 
+form {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 5em;
+}
+
+form input,
+textarea,
+button {
+  padding: 0.5em;
+  margin: 0.5em;
+  border-top: none;
+}
+
+form button {
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+
+  box-shadow: 1px 1px 1px gray;
+  transition: all 0.2s ease-in;
+}
+
+form button:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
+}
+
 .footer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 2em;
+  align-items: center;
   background-image: linear-gradient(
     80deg,
     hsl(240deg 5% 81%) 0%,
@@ -193,11 +222,30 @@ body {
     hsl(240deg 5% 98%) 89%,
     hsl(0deg 0% 100%) 100%
   );
-  height: 4em;
+  height: 6em;
   padding-bottom: 0.2em;
-  padding-top: 0.8em;
+  padding-top: 1.5em;
 }
 
-.footer ion-icon {
-  font-size: 2rem;
+.sm-icons {
+  margin-bottom: 1em;
+}
+
+.sm-icons a {
+  margin: 1em;
+}
+
+.fa-facebook-official {
+  color: darkblue;
+  font-size: 1.5rem;
+}
+
+.fa-instagram {
+  color: darkred;
+  font-size: 1.5rem;
+}
+
+.fa-pinterest {
+  color: red;
+  font-size: 1.5rem;
 }
