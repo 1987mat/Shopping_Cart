@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
 import Header from './Header';
 import imagesArr from './Images';
 import Modal from './Modal';
-import Cart from './Cart';
 import Footer from './Footer';
+import { useState } from 'react';
 
 const Shop = () => {
   const [modalStatus, setModalStatus] = useState(false);
   const [itemID, setItemID] = useState(null);
   const [itemImage, setItemImage] = useState(null);
-  const [item, setItem] = useState(null);
+  const [itemName, setItemName] = useState(null);
   const [itemPrice, setItemPrice] = useState(null);
   const [itemDescription, setItemDescription] = useState(null);
   const [addedItem, setAddedItem] = useState(false);
@@ -20,7 +19,7 @@ const Shop = () => {
     setModalStatus(!modalStatus);
     setItemID(item.id);
     setItemImage(item.src);
-    setItem(item.title);
+    setItemName(item.title);
     setItemPrice(item.price);
     setItemDescription(item.description);
   };
@@ -31,11 +30,12 @@ const Shop = () => {
   };
 
   const addToCart = (image, title, price) => {
-    console.log(item);
     const obj = { image, title, price };
+    console.log(obj);
     setAddedItem(true);
     setCount(count + 1);
     setCartArr(cartArr.concat(obj));
+    console.log(cartArr);
   };
 
   return (
@@ -73,7 +73,7 @@ const Shop = () => {
         <Modal
           showModal={modalStatus}
           itemImage={itemImage}
-          itemName={item}
+          itemName={itemName}
           itemPrice={itemPrice}
           itemDescription={itemDescription}
           itemID={itemID}

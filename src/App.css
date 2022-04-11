@@ -171,9 +171,25 @@ body {
   width: 50%;
 }
 
+.go-back-btn {
+  position: fixed;
+  bottom: 5em;
+  left: 65%;
+}
+
+.checkout-btn {
+  position: fixed;
+  bottom: 5em;
+  left: 52%;
+}
+
 .item-link:focus {
   outline: none !important;
   box-shadow: none !important;
+}
+
+.cart {
+  height: 100vh;
 }
 
 .contact-container {
@@ -187,11 +203,12 @@ form {
 }
 
 form input,
-textarea,
-button {
+button,
+textarea {
   padding: 0.5em;
   margin: 0.5em;
   border-top: none;
+  border-left: none;
 }
 
 form button {

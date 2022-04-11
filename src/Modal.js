@@ -16,10 +16,24 @@ const Modal = (props) => {
           <b>{props.itemName}</b>
         </h3>
         <p style={{ color: '#282828' }}>{props.itemDescription}</p>
-        <p style={{ color: '#282828' }}>
-          <b>$ {props.itemPrice}</b>
-        </p>
-        <div className="d-flex flex-row">
+        <div>
+          <button className="btn btn-sm">
+            <b>S</b>
+          </button>
+          <button className="btn btn-sm">
+            <b>M</b>
+          </button>
+          <button className="btn btn-sm">
+            <b>L</b>
+          </button>
+          <button className="btn btn-sm">
+            <b>XL</b>
+          </button>
+        </div>
+        <div>
+          <p className="mt-5 ml-2" style={{ color: '#282828' }}>
+            <b>$ {props.itemPrice}</b>
+          </p>
           <button
             onClick={() =>
               props.addToCart(props.itemImage, props.itemName, props.itemPrice)
@@ -28,13 +42,17 @@ const Modal = (props) => {
           >
             Add To Cart
           </button>
-          <button onClick={props.closeModal} className="btn btn-md ml-2">
-            Go Back
-          </button>
         </div>
+        <button
+          onClick={props.closeModal}
+          className="btn btn-md ml-2 go-back-btn"
+        >
+          Go Back
+        </button>
+
         {props.addedItem ? (
           <Link to="/cart">
-            <button className="btn btn-md btn-success mt-5">
+            <button className="btn btn-md btn-success mt-5 checkout-btn">
               Go To Checkout
             </button>
           </Link>
